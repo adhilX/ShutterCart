@@ -125,8 +125,15 @@
                                     <td>₹<%=coupon.offerPrice%></td>
                                     <td>₹<%=coupon.minimumPrice%></td>
                                     <td>
-                                        <span class="badge <%= coupon.isListed ? 'bg-success' : 'bg-danger' %>">
-                                            <%= coupon.isListed ? 'Active' : 'Inactive' %>
+                                        <% 
+                                            const expireDate = new Date(coupon.expireOn);
+                                            const today = new Date();
+                                            today.setHours(0, 0, 0, 0);
+                                            expireDate.setHours(0, 0, 0, 0);
+                                            const isExpired = expireDate < today;
+                                        %>
+                                        <span class="badge <%= isExpired ? 'bg-danger' : 'bg-success' %>">
+                                            <%= isExpired ? 'Expired' : 'Active' %>
                                         </span>
                                     </td>
                                     <td>
