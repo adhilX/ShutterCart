@@ -39,12 +39,12 @@
         </div>
         <nav>
             <ul class="menu-aside">
-                <li class="menu-item active">
+                <li class="menu-item <%= activePage === 'dashboard' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/"> <i class="icon material-icons md-home"></i>
                         <span class="text">Dashboard</span>
                     </a>
                 </li>
-                <li class="menu-item ">
+                <li class="menu-item <%= activePage === 'products' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/products"> <i class="icon material-icons md-shopping_bag"></i>
                         <span class="text">Products</span>
                     </a>
@@ -55,7 +55,7 @@
                         <a href="page-categories.html">Categories</a>
                     </div> -->
                 </li>
-                <li class="menu-item ">
+                <li class="menu-item <%= activePage === 'orders' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/orders"> <i class="icon material-icons md-shopping_cart"></i>
                         <span class="text">Orders</span>
                     </a>
@@ -67,7 +67,7 @@
                         <a href="page-invoice.html">Invoice</a>
                     </div>
                 </li> -->
-                <li class="menu-item  ">
+                <li class="menu-item <%= activePage === 'customers' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/users"> <i class="icon material-icons md-store"></i>
                         <span class="text">Customers</span>
                     </a>
@@ -77,11 +77,11 @@
                         <a href="page-seller-detail.html">Seller profile</a>
                     </div> -->
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <%= activePage === 'category' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/category"> <i class="icon material-icons md-stars"></i>
                         <span class="text">Categories</span> </a>
                 </li>
-               <li class="menu-item  ">
+               <li class="menu-item <%= activePage === 'coupon' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/coupon"> <i class="icon material-icons md-add_box"></i>
                         <span class="text">Coupons</span>
                     </a>
@@ -112,7 +112,7 @@
                         <span class="text">Reviews</span>
                     </a>
                 </li>-->
-                <li class="menu-item">
+                <li class="menu-item <%= activePage === 'brands' ? 'active' : '' %>">
                     <a class="menu-link" href="/admin/brands"> <i class="icon material-icons md-stars"></i>
                         <span class="text">Brands</span> </a>
                 </li> 

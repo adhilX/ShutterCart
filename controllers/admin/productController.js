@@ -14,6 +14,7 @@ const getProductAddPage = async (req, res) => {
     return res.render("product-add", {
       cat: category,
       brand: brand,
+      activePage: 'products'
     });
   } catch (error) {
     res.redirect("/admin/pageerror");
@@ -128,6 +129,7 @@ const getAllProducts = async (req, res) => {
       totalPages: Math.ceil(count / limit),
       cat: category,
       brand: brand,
+      activePage: 'products'
     });
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -195,6 +197,7 @@ const getEditProducts = async (req, res) => {
       product,
       cat: category,
       brand,
+      activePage: 'products'
     });
   } catch (error) {
     console.error("Error in getEditProduct:", error.message);

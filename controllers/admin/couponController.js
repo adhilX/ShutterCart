@@ -4,7 +4,7 @@ const Coupon = require('../../models/couponSchema')
 const getCouponList = async (req, res) => {
     try {
         const coupons = await Coupon.find().sort({ createdOn: -1 }); 
-        res.render('coupon', { coupons }); 
+        res.render('coupon', { coupons, activePage: 'coupon' }); 
     } catch (error) {
         console.error(error);
         res.status(500).send('Server error');
@@ -94,7 +94,7 @@ const  loadeditCoupon = async (req, res) => {
             });
         }
 
-        res.render('editCoupon', { coupon });
+        res.render('editCoupon', { coupon, activePage: 'coupon' });
 
     } catch (error) {
         console.error("Error getting coupon details:", error);

@@ -314,7 +314,8 @@ const loadDashboard = async (req, res) => {
                 topProducts,
                 topBrands,
                 timeFrame,
-                admin: true
+                admin: true,
+                activePage: 'dashboard'
             });
         } else {
             res.redirect('/admin/login');

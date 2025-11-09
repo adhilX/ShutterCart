@@ -28,6 +28,7 @@ const getOrderList = async (req, res) => {
            limit,
            hasNextPage: page < totalPages,
            hasPrevPage: page > 1,
+           activePage: 'orders'
                 });
     
     } catch (error) {
@@ -71,6 +72,7 @@ const getOrderDetailsPage = async (req, res) => {
             subtotal,
             shippingCost,
             grandTotal,
+            activePage: 'orders'
         });
     } catch (error) {
         console.error('Error fetching order details:', error);

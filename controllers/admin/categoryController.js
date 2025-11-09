@@ -20,7 +20,8 @@ const categoryinfo = async(req,res)=>{
         cat:categoryData,
         currentpage:page,
         totalPage:totalPage,
-        totalcategories:totalcategories
+        totalcategories:totalcategories,
+        activePage: 'category'
     }
     )
     } catch (error) {
@@ -169,7 +170,7 @@ const geteditcategory = async (req,res)=>{
             res.status(401).json({ status:false,message:'dont get the category id '})
         }
         const category = await Category.findById(id)
-        res.render('edit-category',{category})
+        res.render('edit-category',{category, currentPage: 'category'})
 
     } catch (error) {
        res.redirect('/admin/pageerror')

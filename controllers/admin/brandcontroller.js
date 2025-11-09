@@ -17,7 +17,8 @@ const getBrandpage= async (req,res)=>{
             data:reversBrand,
             currentpage:page,
             totalpages:totalpages,
-            totalBrands:totalBrands
+            totalBrands:totalBrands,
+            activePage: 'brands'
         })
     } catch (error) {
         res.redirect('/pageerror')
