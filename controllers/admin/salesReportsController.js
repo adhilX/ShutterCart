@@ -53,6 +53,7 @@ const ExcelJS = require('exceljs');
             startDate: startDate || '',
             endDate: endDate || '',
             title: 'Sales Reports',
+            activePage: 'dashboard',
             pagination: {
                 page: parseInt(page),
                 totalPages,
@@ -60,7 +61,7 @@ const ExcelJS = require('exceljs');
                 hasPrevPage: page > 1,
                 nextPage: parseInt(page) + 1,
                 prevPage: parseInt(page) - 1,
-                totalOrders
+                totalOrders,
             }
         });
     } catch (error) {
